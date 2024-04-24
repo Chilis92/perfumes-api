@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      host: ${MONGOHOST}
+      port: 47734
+      username: ${MONGOUSER}
+      password: ${MONGOPASSWORD}
+      database: perfumes
+      authentication-database: admin
