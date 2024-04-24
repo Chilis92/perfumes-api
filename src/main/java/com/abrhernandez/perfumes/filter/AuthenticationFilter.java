@@ -24,6 +24,7 @@ public class AuthenticationFilter extends OncePerRequestFilter {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if(authentication == null || !authentication.isAuthenticated()){
+            filterChain.doFilter(request,response);
             return;
         }
         filterChain.doFilter(request,response);
